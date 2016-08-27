@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="weatherApp">
+    <head>
+        <title>AngularJS toDoList + Weather App</title>
+				<link rel="stylesheet" type="text/css" href="css/todos.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome -->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+			<script src="https://use.fontawesome.com/96cee0868c.js"></script>
+      
+        
+    </head>
+    <body>
+
+     <header>
+			<nav class="nav nav-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">To-Do List</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li id="home" ><a class="navbar-brand" href="#/"><i class="fa fa-home" ></i> Home</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+				
+	<div id="container">
+		
+	<h1 id="toDo">
+		To-Do List<i class="fa fa-plus"></i>
+	</h1>
+	<input type="text" placeholder="Add New Todo">
+
+	<ul>
+		<li>
+			<span><i class="fa fa-trash"></i></span>
+			Code
+		</li>
+		<li>
+			<span><i class="fa fa-trash"></i></span> 
+			Read
+		</li>
+		<li>
+			<span><i class="fa fa-trash"></i></span>
+			Run</li>
+	</ul>
+
+	</div>
+
+        <div class="container" id="forecast">
+					
+            <div ng-view></div>
+
+				</div>
+			
+				<div ng-include="'directives/footer.html'">
+				</div>
+
+			
+               <!-- load angular via CDN -->
+        <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.8/angular-resource.min.js"></script>
+      <script src="app.js"></script>
+			<script src="js/routes.js"></script>
+			<script src="directives.js"></script>
+			<script src="js/services.js"></script>
+			<script type="text/javascript" src="js/todos.js"></script>
+			<script src="controllers.js"></script>
+    </body>
+</html>
